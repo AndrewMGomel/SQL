@@ -1,0 +1,30 @@
+--Create a clothing store database
+
+
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, inventory INTEGER, sales INTEGER, satisfaction_rating INTEGER, cogs INTEGER);
+INSERT INTO clothing_store VALUES 
+(1, "Shirts", 25, 20, 50, 5, 10),
+(2, "Pants", 30, 10, 20, 5, 10),
+(3, "Shorts", 20, 30, 7, 4, 10),
+(4, "Hats", 15, 20, 9, 5, 5),
+(5, "Dresses", 45, 87, 7, 5, 15),
+(6, "Underwear", 10, 50, 7, 5, 2),
+(7, "Hoodies", 40, 4, 45, 5, 20),
+(8, "Jackets", 45, 1, 2, 4, 20),
+(9, "Socks", 5, 20, 60, 5, 1),
+(10, "Belts", 25, 20, 8, 3, 10),
+(11, "Shoes", 50, 20, 9, 5, 20),
+(12, "Scarfs", 15, 20, 254, 5, 2),
+(13, "Swimsuits", 20, 20, 234, 4, 10),
+(14, "Ties", 25, 20, 89, 5, 4),
+(15, "Raincoats", 35, 2, 5, 5, 15);
+
+
+--display the items and their price ordered by price
+
+SELECT item, price FROM clothing_store ORDER BY price;
+
+
+--display total store revenue as a function of price and sales
+
+SELECT sum(price*sales) FROM clothing_store;
