@@ -1,6 +1,5 @@
 --Create a clothing store database
 
-
 CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, inventory INTEGER, sales INTEGER, satisfaction_rating INTEGER, cogs INTEGER);
 INSERT INTO clothing_store VALUES 
 (1, "Shirts", 25, 20, 50, 5, 10),
@@ -28,3 +27,8 @@ SELECT item, price FROM clothing_store ORDER BY price;
 --display total store revenue as a function of price and sales
 
 SELECT sum(price*sales) FROM clothing_store;
+
+
+--display revenue for each individual item (and the item it corresponds with) as a function of price and sales
+
+SELECT item, (price*sales) FROM clothing_store;
