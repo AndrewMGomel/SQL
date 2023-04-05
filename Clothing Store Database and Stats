@@ -1,3 +1,9 @@
+/*
+This project demonstrates the creation and management of a clothing store database using basic SQL concepts. 
+The focus is on creating a table, inserting data, and using SELECT queries with various clauses.
+*/
+
+
 --Create a clothing store database
 
 CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, inventory INTEGER, sales INTEGER, satisfaction_rating INTEGER, cogs INTEGER);
